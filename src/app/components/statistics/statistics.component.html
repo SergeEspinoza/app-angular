@@ -1,0 +1,32 @@
+<div class="col">
+  <h2>Pibs</h2>
+
+  <div class="card">
+    <div class="card-header">
+      OBJETIVO
+    </div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p>En esta tabla se muestran los porcentajes de las variaciones en el aumento o disminución del PIB
+        en un intervalo que comprende del año 1990 al 2017</p>
+      </blockquote>
+    </div>
+  </div>
+
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+
+        <th>Año</th>
+        <th>Porcentaje</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pib of pibs">
+        <td>{{ pib.year }}</td>
+        <td>{{ pib.percent }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,26 @@
+<div>
+  <div class="card">
+    <div class="card-header">
+    <h1>Gráfica</h1>  
+    </div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p>Gráfica de barras que representa los datos de la tabla donde se puede observar las variaciones del porcentaje en cada
+        uno de los años del intervalo</p>
+      </blockquote>
+    </div>
+  </div>
+
+
+  <div style="display: block" *ngIf="percents.length">
+    <canvas baseChart
+            [datasets]="barChartData"
+            [labels]="years"
+            [options]="barChartOptions"
+            [legend]="barChartLegend"
+            [chartType]="barChartType"
+           (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+  </div>
+
+</div>
